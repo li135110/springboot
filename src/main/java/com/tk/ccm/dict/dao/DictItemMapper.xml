@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tk.ccm.dict.dao.DictItemDao">
+    <select id="selectDcitItem" resultType="com.tk.ccm.dict.bo.DictItemBo">
+       SELECT
+            *
+        FROM
+            dict_item
+    </select>
+
+    <select id="selectDictItemOne" parameterType="java.lang.Integer" resultType="com.tk.ccm.dict.bo.DictItemBo">
+        SELECT
+            *
+        FROM
+            dict_item
+        WHERE
+            item_id = #{itemId}
+    </select>
+</mapper>
